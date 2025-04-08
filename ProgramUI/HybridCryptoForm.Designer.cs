@@ -40,6 +40,8 @@ namespace ProgramUI
             this.btnEncryptAndSign = new System.Windows.Forms.Button();
             this.txtOriginalMessage = new System.Windows.Forms.TextBox();
             this.lblOriginalMessage = new System.Windows.Forms.Label();
+            this.txtEncryptedMessage = new System.Windows.Forms.TextBox();
+            this.lblEncryptedMessage = new System.Windows.Forms.Label();
             this.groupBoxDecryption = new System.Windows.Forms.GroupBox();
             this.btnDecryptAndVerify = new System.Windows.Forms.Button();
             this.txtDecryptedMessage = new System.Windows.Forms.TextBox();
@@ -130,9 +132,11 @@ namespace ProgramUI
             this.groupBoxEncryption.Controls.Add(this.btnEncryptAndSign);
             this.groupBoxEncryption.Controls.Add(this.txtOriginalMessage);
             this.groupBoxEncryption.Controls.Add(this.lblOriginalMessage);
+            this.groupBoxEncryption.Controls.Add(this.txtEncryptedMessage);
+            this.groupBoxEncryption.Controls.Add(this.lblEncryptedMessage);
             this.groupBoxEncryption.Location = new System.Drawing.Point(12, 172);
             this.groupBoxEncryption.Name = "groupBoxEncryption";
-            this.groupBoxEncryption.Size = new System.Drawing.Size(776, 100);
+            this.groupBoxEncryption.Size = new System.Drawing.Size(776, 170);
             this.groupBoxEncryption.TabIndex = 4;
             this.groupBoxEncryption.TabStop = false;
             this.groupBoxEncryption.Text = "Шифрование";
@@ -164,12 +168,30 @@ namespace ProgramUI
             this.lblOriginalMessage.TabIndex = 0;
             this.lblOriginalMessage.Text = "Сообщение:";
             // 
+            // txtEncryptedMessage
+            // 
+            this.txtEncryptedMessage.Location = new System.Drawing.Point(137, 93);
+            this.txtEncryptedMessage.Multiline = true;
+            this.txtEncryptedMessage.Name = "txtEncryptedMessage";
+            this.txtEncryptedMessage.ReadOnly = true;
+            this.txtEncryptedMessage.Size = new System.Drawing.Size(500, 60);
+            this.txtEncryptedMessage.TabIndex = 4;
+            // 
+            // lblEncryptedMessage
+            // 
+            this.lblEncryptedMessage.AutoSize = true;
+            this.lblEncryptedMessage.Location = new System.Drawing.Point(6, 96);
+            this.lblEncryptedMessage.Name = "lblEncryptedMessage";
+            this.lblEncryptedMessage.Size = new System.Drawing.Size(125, 20);
+            this.lblEncryptedMessage.TabIndex = 3;
+            this.lblEncryptedMessage.Text = "Зашифровано:";
+            // 
             // groupBoxDecryption
             // 
             this.groupBoxDecryption.Controls.Add(this.btnDecryptAndVerify);
             this.groupBoxDecryption.Controls.Add(this.txtDecryptedMessage);
             this.groupBoxDecryption.Controls.Add(this.lblDecryptedMessage);
-            this.groupBoxDecryption.Location = new System.Drawing.Point(12, 278);
+            this.groupBoxDecryption.Location = new System.Drawing.Point(12, 348);
             this.groupBoxDecryption.Name = "groupBoxDecryption";
             this.groupBoxDecryption.Size = new System.Drawing.Size(776, 100);
             this.groupBoxDecryption.TabIndex = 5;
@@ -208,7 +230,7 @@ namespace ProgramUI
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblStatus.Location = new System.Drawing.Point(12, 390);
+            this.lblStatus.Location = new System.Drawing.Point(12, 460);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 20);
             this.lblStatus.TabIndex = 6;
@@ -217,7 +239,7 @@ namespace ProgramUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 420);
+            this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.groupBoxDecryption);
             this.Controls.Add(this.groupBoxEncryption);
@@ -251,6 +273,8 @@ namespace ProgramUI
         private System.Windows.Forms.Button btnEncryptAndSign;
         private System.Windows.Forms.TextBox txtOriginalMessage;
         private System.Windows.Forms.Label lblOriginalMessage;
+        private System.Windows.Forms.TextBox txtEncryptedMessage;
+        private System.Windows.Forms.Label lblEncryptedMessage;
         private System.Windows.Forms.GroupBox groupBoxDecryption;
         private System.Windows.Forms.Button btnDecryptAndVerify;
         private System.Windows.Forms.TextBox txtDecryptedMessage;

@@ -32,6 +32,14 @@ namespace ProgramUI
             {
                 string message = txtOriginalMessage.Text;
                 _sender.EncryptAndSign(message);
+                
+                // Отображаем зашифрованное сообщение для наглядности
+                if (File.Exists("data.enc"))
+                {
+                    byte[] encryptedData = File.ReadAllBytes("data.enc");
+                    txtEncryptedMessage.Text = Convert.ToBase64String(encryptedData);
+                }
+                
                 lblStatus.Text = "Сообщение зашифровано и подписано";
             }
             catch (Exception ex)
